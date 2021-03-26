@@ -16,12 +16,17 @@
     text-align: center;
   }
 
+  #agora {
+    background-color: #d1e7dd;
+  }
+
   #aula{
     cursor: pointer;
   }
 
   th, td {
     vertical-align: middle;
+    min-width: 150px;
   }
 
   #disciplina:hover {
@@ -113,7 +118,7 @@
                     <td>Geografia</td>
                     <td>Literatura</td>
                     <td>Biologia</td>
-                    <td>Matemática</td>
+                    <td id="agora">Matemática</td>
                   </tr>
                   <tr>
                     <th scope="row">20:15 - 21:00</th>
@@ -260,7 +265,7 @@
       "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho",
       "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
     ]
-});
+  });
   console.log(moment.locale());
   let renderClock = function() {
     var localLocale = moment();
@@ -272,6 +277,12 @@
   function meet(codigo){
     window.open('https://meet.google.com/'+ codigo + '?pli=1&authuser=1', '_blank');
   }
+  // var now = moment();
+  // if(now.format('d')){
+
+  // }
+
+  // document.getElementById('one').id = 'two';
 </script>
 
 </html>
