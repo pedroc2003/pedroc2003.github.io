@@ -1116,7 +1116,12 @@
   setInterval(renderClock, 1000);
 
   function meet(codigo) {
-    window.open('https://meet.google.com/' + codigo + '?pli=1&authuser=1', '_blank');
+    const authuser = prompt("Qual é o authuser?", "1");
+    if(authuser != null){
+      window.open('https://meet.google.com/' + codigo + '?pli=1&authuser=' + authuser, '_blank');
+    } else {
+      alert("Erro inesperado");
+    }
   };
 
   function formulario(caminho) {
